@@ -20,6 +20,8 @@ var noReturnUrls = [
  */
 exports.signup = function (req, res) {
   // For security measurement we remove the roles from the req.body object
+  console.log('===req.body==', req.body);
+  
   delete req.body.roles;
 
   // Init user and add missing fields
